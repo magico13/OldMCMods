@@ -1,0 +1,75 @@
+Nether Bits
+by magico13
+
+-- 0.3.3 --
+ * Machines use a single block ID now. YOU MUST BREAK AND REPLACE THEM, OR YOU WILL LOSE THEM IN THE FUTURE!
+ * Lava crystal resonators now have a smoother "filling" animation (13 total states)
+ * Dungeon spawn frequency is configurable. Default is 2% chance (lowered from 5%)
+ * Lava crystal resonator code cleaned significantly.
+ * Cobble gen bug fix, it would always keep 1 cobble in it even if a redstone signal was applied
+ * Resonance Band lasts half as long (I believe it's 5 minutes in lava/ 7.5 in fire)
+
+-- 0.3.2 --
+ * Update to MC 1.4.7
+ * Resonator texture is now dependent on pairing. When paired, the lava texture faces the paired block.
+ * Resonator texture is now animated. Has 4 stages, empty, low, mid, and full.
+ * Internal file structure changes. Cleans up the structure a lot.
+ * Cobble gen can be disabled with redstone
+ * Cobble Gen no longer lets you put anything except cobblestone into the slot (before would throw it out)
+ * Shards are now worth the same as lava buckets in a furnace. Reformed shards are worth 4x.
+ * Added Nether Dungeons
+
+-- v0.3.1 --
+ * Update to Minecraft 1.4.6
+ * Name changed from the generic Nether Ore Mod to Nether Bits
+ * Lava Gen and Cobble Gen now use updateEntity() instead of block updates. Hopefully fixed occasional loss of pairing, and they should check for other unpaired resonators if they lose pairing.
+ * Added debug option to config
+
+-- v0.3.0 --
+ * Update to Minecraft 1.4.5
+ * Lava Crystals now spawn taller. They should be easier to collect now.
+ * Fixed the Pick Block functionality with the ores.
+ * Added Resonance Band. Crafted from three reformed crystals and iron. Prevents damage from fire for 15 minutes, or from lava for 10 minutes.
+ * Slight change to Cobble Gen texture
+
+-- v0.2.5 --
+ * Changed recipe of Resonator to OOO, OCO, OOO where O is obsidian and C is a reformed crystal. Now only requires 1 diamond and 16 crystal shards
+ * Added reformed crystal and reformed shard. Reformed shards are made from four crystal shards, reformed crystals are made from a diamond and 4 reformed shards.
+ * Added additional debug info for myself.
+ * Added config option for crystal generation rate.
+
+ -- v0.2.4 --
+ * Added Cobblestone Generator. Requires a shard, an iron pickaxe, a bucket of water, and a bunch of cobblestone. Produces 2 cobblestone a second. Can be pumped out from any side and ejects any items that aren't cobblestone.
+ * Really (hopefully) fixed resonators being able to make triplet double spawners.
+ * Rebalanced ore generation.
+ * Reduced resonator time to 90 seconds.
+
+ -- v0.2.3 --
+ * Update to Forge 318 for 1.3.2
+ * Changed crystal shard texture. Hopefully is nicer now.
+ * Added ability to right-click with shard to spawn lava source block
+ * Changed resonator recipe to require 6 obsidian and 3 crystals
+ * Changed crystal recipe to require 8 shards surrounding a diamond
+ * Complete Resonator rewrite. They are now tile entities and only work in a pair. Can't make triplet double spawners anymore, and theoretically shouldn't be able to trick it into generating twice.
+
+ -- v0.2.2 --
+ * Added config option for resonator frequency, value is in seconds
+ * Changed default resonator update frequency from 30 seconds to 120 seconds
+ * Resonators now schedule an update when placed in the world instead of waiting for a random tick. Should still survive sessions.
+ * Added recipe to convert crystals into crystal shards.
+ * Added attempted fix for residual lava flows causing issues with new sources being made.
+
+
+ -- v0.2.1 --
+ * Added lava crystals, generated in lava, drop lava crystal shards
+ * Added lava crystal resonator. Crafted from crystals and obsidian like TNT. When placed two blocks away from each other, cause a lava source to spawn between them every 30 seconds, after initial wait. Occassional Null Pointer Exceptions noticed.
+ * Fixed Nether Torch recipe creating only one torch
+ * Added red flame to Nether Torch.
+ * Fixed coal generating only below level 30
+ * Changed coal textures to be lighter
+
+ -- Pre v0.2.1 --
+ * Added ores
+ * Added ender ore
+ * Nether coal acts as 1.5 coal for fuel and torch making
+ * Fortune and EXP drops work, however are very generous.

@@ -1,0 +1,87 @@
+ExtraIndustrial IC2 Addon 
+by magico13
+
+-- v0.1.4 --
+ * UPDATE: Updated to MC 1.5.2
+ * 
+ * ADDED: Manual and Automatic modes to Industrial Crafting Table. Click the output item to craft in manual mode. Similar to RailCraft rolling machine
+ * ADDED: Fusion reactor. Produces large amount of power from Electrolyzed Water Cells. Multi-block structure. Buggy, but should work.
+ * ADDED: Charge slot in Ingot Compactor works now
+ * 
+ * BUGFIX: Machine GUIs should update correctly
+ * BUGFIX: Five solars are actually craftable now... (in Industrial Crafting table)
+ * BUGFIX: Measuring stick works server-side instead of client-side. It was working properly before, then suddenly stopped.
+ * BUGFIX: Industrial Crafting table output should fill stacks now (except apparently with the final stack)
+ * 
+ * CHANGED: Machines now use the vanilla sided-behavior for use with hoppers. The ingot compactor is just like a furnace, the industrial crafter inputs through the top and outputs everywhere else.
+
+-- v0.1.3 --
+ * ADDED: IC2 upgrades work in machines
+ * ADDED: Industrial Crafter. Automatic crafting, will be only way to craft new machines/items. Can also break down machines
+ * ADDED: Measuring stick. It's old code, and doesn't always work how you want, but it gets the job done. Stick + ink sac
+ * 
+ * CHANGED: All TileEntityMachine blocks (including the Ingot Compactor) explode when given more than LV.
+ * CHANGED: Superconductor recipe makes 32 cables
+ * CHANGED: Superconductor works with 8192 EU/t instead of 4096.
+ * CHANGED: Small texture changes to machines
+ * 
+ * BUGFIX: Fix for ingot compactor messing up with blocks that use the same ID
+
+ * INTERNAL: removeItemFromInventory function works with any ItemStack[] and any amounts
+
+-- v0.1.2 --
+ * Attempt to fix issues with drill mode being out of sync on the client.
+ * Portable crafter item voiding now requires 4 EU per individual item in a stack. Only uses EU when it deletes the item.
+ * Added buttons to the crafter. "Clr" clears the crafting grid, "S" saves the current recipe, and "L" loads that recipe later.
+ * Portable Crafter has 3 sets of saved recipes.
+ * Internal structure change with creation of blocks and items.
+ * Added superconductor cable. 4096 EU/t max, no EU loss.
+ * Actually fixed the ingot compactor packet issues. It will retain it's facing now.
+
+-- v0.1.1 --
+ * Fixed issue with packets and the ingot compactor causing server crashes
+
+-- v0.1.0 --
+ * Update to IC2 115.
+ * Pocket Crafter bug fixes.
+ * Pocket Crafter now has an item deletion slot to delete unwanted items.
+ * Ingot Compactor now (mostly) fully working. GUI updates properly and it uses EU each tick instead of at the end of the operation.
+ * Compactor now faces the right way when placed and has working shift click support.
+ * Base code is now mostly in place to begin work on more advanced machines.
+
+-- v0.0.6 --
+ * Digital Pocket Crafter now pulls from the inventory and uses ghost items in the recipe. Saves recipe on close.
+ * Added Peltier Generator. Produces .25 EU/t when lava and water on opposing sides. 2 EU/t for lava and ice.
+ * Small change to drill to make it better than punching when working on blocks it's not effective against
+ * Drill speed mode speed increased along with EU usage to 75.0F and 400 EU from 50 and 250.
+ * Five Solar now produces 1-2 EU when the sun is not visible but there is light (torches, etc)
+ * Five Solar got new textures.
+ * Added/working on Ingot Compactor. Performs the 3x3 crafting of ingots into storage blocks. Still in early stages.
+
+-- v0.0.5 --
+ * Added Five Solar. 5EU/t, requires 5 solar panels. Can be used with ulv cable
+ * Added compact storage of RP nikolite.
+ * Added Digital Pocket Crafter. Requires EU for portable crafting. Much thanks to Pahimar.
+ * Changing modes on drill requires the player to be sneaking. Temporary fix until M key is setup
+ * Made the testing blocks semi-legitimate things. Both share an ID, the source stops sending energy when redstoned.
+ * All items and blocks can be disabled by setting the ID to 0. Cannot disable individual blocks yet.
+ * Several internal changes to future proof things, one part being cleaner file structure.
+ * Several small fixes with the Dynamic Drill: now displays the server's mode, fortune II not IV, silktouch I not III.
+ * Compaction recipes without the compressor are now shapeless.
+
+-- v0.0.4 --
+ * Fixed issue with removing enchantments from drill on servers
+
+-- v0.0.3 --
+ * MC1.4.6 IC2 1.112.170
+ * Add checks for NEI to disable charge indicators on dynamic drill
+
+-- v0.0.2 --
+ * Update to Minecraft 1.4.5
+ * Added Carbon Block for coal storage. (8 coal in compressor) (returns 8 coal in crafting table) (Can be macerated for 8 dust)
+ * Added Dynamic Drill. Higher tier drill requiring iridium. Has multiple modes (dynamic: diamond drill, fortune: fortune 4 enchant, silktouch: silktouch 3 enchant, speed: 2.5x diamond drill (5x iron drill), low power: iron drill)
+
+-- v0.0.1 --
+ * Initial "release" (for private use on our server)
+ * Adds redstone compaction recipe (8 redstone in compressor)
+ * Adds reverse recipe to make 8 redstone from compact block, in macerator
